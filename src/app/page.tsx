@@ -1,7 +1,4 @@
 "use client"
-import * as DropDownPrimitive from "@radix-ui/react-dropdown-menu"
-import * as AvatarPrimitive from "@radix-ui/react-avatar"
-import { ChevronDown } from "lucide-react"
 
 export default function Home() {
   return (
