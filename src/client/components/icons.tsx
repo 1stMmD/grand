@@ -2,7 +2,8 @@ import {
     Search,
     Moon,
     Sun,
-    LucideProps
+    LucideProps,
+    User2
 } from "lucide-react"
 
 export const Icons = {
@@ -25,5 +26,6 @@ export const Icons = {
     ) ,
     search : Search,
     moon : Moon,
-    sun : Sun
+    sun : Sun,
+    user : User2
 }
