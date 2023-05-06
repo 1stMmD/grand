@@ -6,6 +6,8 @@ import UserAccountNav from '@/client/components/user-account-nav'
 import IconButton from '@/client/components/ui/icon-button'
 import { useMediaQuery } from '@/client/hooks/useMediaQuery'
 import IconButtonWithText from '@/client/components/ui/icon-button-with-text'
+import SearchInputNav from '@/client/components/search-input-nav'
+import Link from 'next/link'
 
 export const metadata = {
   title: 'Grand',
@@ -78,10 +80,13 @@ const LeftSide = () => {
     flex
     items-center
     justify-center
+    gap-4
     '>
-      <Icons.logo className='h-6' />
+      <Link href="/">
+        <Icons.logo className='h-6'/>
+      </Link>
 
-      {SM ? "test" : ""}
+      {SM ? <SearchInputNav/> : ""}
     </div>
   )
 }

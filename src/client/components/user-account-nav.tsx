@@ -17,8 +17,8 @@ import { useMediaQuery } from "../hooks/useMediaQuery"
 
 function UserAccountNav({ user } : { user : { name : string, image : string }}) {
     const pathname = usePathname()
-    const {MD} = useMediaQuery()
-    
+    const { MD } = useMediaQuery()
+
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>

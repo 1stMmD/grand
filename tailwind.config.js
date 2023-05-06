@@ -12,6 +12,9 @@ module.exports = {
         neutral : neutral[900],
         background : white,
         primary : cyan[500],
+      },
+      opacity : {
+        "2" : ".025"
       }
     },
   },
