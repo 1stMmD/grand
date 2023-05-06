@@ -1,12 +1,17 @@
+import { BarChart, Bookmark, LucideIcon } from "lucide-react"
 import {
     Search,
     Moon,
     Sun,
     LucideProps,
-    User2
+    User,
+    ChevronDown,
+    FileText,
 } from "lucide-react"
 
-export const Icons = {
+export const Icons  : {
+    [name : string] : LucideIcon
+} = {
     logo : ({...props} : LucideProps) => (
         <svg 
         aria-hidden="true"
@@ -27,5 +32,9 @@ export const Icons = {
     search : Search,
     moon : Moon,
     sun : Sun,
-    user : User2
+    user : User,
+    down : ChevronDown,
+    fileText : FileText,
+    bookmark : Bookmark,
+    barChart : BarChart
 }

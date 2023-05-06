@@ -17,11 +17,11 @@ function UserAvatar({
   return (
     <Avatar {...props}>
         {user.image ? (
-            <AvatarImage alt="picture" src={user.image}/>
+            <AvatarImage alt={user.name} src={user.image}/>
         ) : (
-            <AvatarFallback>
+            <AvatarFallback className='bg-neutral/10'>
                 <span className='sr-only'>{user.name}</span>
-                <Icons.user className="h-4 aspect-square"/>
+                <Icons.user strokeWidth={1} className="h-5 aspect-square text-neutral"/>
             </AvatarFallback>
         )}
     </Avatar>

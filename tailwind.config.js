@@ -1,15 +1,18 @@
 /** @type {import('tailwindcss').Config} */
+import { neutral, cyan, white} from "tailwindcss/colors"
+
 module.exports = {
   content: [
     './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode : ["class"],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+      colors : {
+        neutral : neutral[800],
+        background : white,
+        primary : cyan[500],
+      }
     },
   },
   plugins: [],

@@ -11,7 +11,10 @@ const preview: Preview = {
     },
     layout : "fullscreen",
     nextjs : {
-      appDirectory : true
+      appDirectory : true,
+      router : {
+        basePath : "/"
+      }
     }
   },
 };

@@ -1,4 +1,8 @@
+"use client"
+
+import { Icons } from '@/client/components/icons'
 import './globals.css'
+import UserAccountNav from '@/client/components/user-account-nav'
 
 export const metadata = {
   title: 'Grand',
@@ -14,10 +18,26 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <header
+        className='
+        flex justify-between items-center px-6 min-h-[57px]
+        border-b-[1px]
+        border-neutral/10
+        '>
+          <Icons.logo className='h-6' />
+
+          <UserAccountNav
+          user={{
+            name : "Mohammad Jamali",
+            image : "https://cdn-images-1.medium.com/v2/1*Zm21cf9mb0p5Dqmlca4DUA.jpeg"
+          }}
+          />
+        </header>
+        {children}
+      </body>
     </html>
   )
 }
