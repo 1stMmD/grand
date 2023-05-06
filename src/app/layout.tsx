@@ -5,6 +5,7 @@ import './globals.css'
 import UserAccountNav from '@/client/components/user-account-nav'
 import IconButton from '@/client/components/ui/icon-button'
 import { useMediaQuery } from '@/client/hooks/useMediaQuery'
+import IconButtonWithText from '@/client/components/ui/icon-button-with-text'
 
 export const metadata = {
   title: 'Grand',
@@ -48,7 +49,11 @@ const RightSide = () => {
       Icon={Icons.search}
       /> : ""}
 
-      {MD ? <></> : ""}
+      {MD ? 
+      <IconButtonWithText
+      Icon={Icons.edit}
+      text="Write"
+      /> : ""}
 
       <IconButton
       Icon={Icons.notification}
