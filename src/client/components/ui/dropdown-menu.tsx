@@ -50,14 +50,31 @@ const DropdownMenuItem = React.forwardRef<
     ref={ref}
     className={cn(
         `flex outline-none px-6 py-2 gap-4 transition-colors
-        hover:text-neutral text-neutral/60
-        cursor-pointer text-[14px] leading-none items-center`,
+        hover:text-neutral text-neutral/80 font-[400]
+        cursor-pointer text-[14px] items-center`,
         className
     )}
     {...props}
     />
 ))
 DropdownMenuItem.displayName = DropdownMenuPrimitive.Item.displayName
+
+const DropdownMenuLabel = React.forwardRef<
+    React.ElementRef<typeof DropdownMenuPrimitive.Label>,
+    React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Label>
+>(({className, ...props}, ref) => (
+    <DropdownMenuPrimitive.Label
+    ref={ref}
+    className={cn(
+        `flex outline-none px-6 py-2 gap-4 transition-colors
+        text-neutral/80 font-[400]
+        cursor-default text-[13px] items-center`,
+        className
+    )}
+    {...props}
+    />
+))
+DropdownMenuLabel.displayName = DropdownMenuPrimitive.Label.displayName
 
 const DropdownMenuSeparator = React.forwardRef<
     React.ElementRef<typeof DropdownMenuPrimitive.Separator>,
@@ -83,5 +100,6 @@ export {
     DropdownMenuSeparator,
     DropdownMenuSub,
     DropdownMenuSubTrigger,
-    DropdownMenuTrigger
+    DropdownMenuTrigger,
+    DropdownMenuLabel
 }

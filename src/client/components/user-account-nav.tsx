@@ -6,7 +6,8 @@ import {
     DropdownMenuItem,
     DropdownMenuTrigger,
     DropdownMenuContent,
-    DropdownMenuSeparator
+    DropdownMenuSeparator,
+    DropdownMenuLabel
 } from "./ui/dropdown-menu"
 import UserAvatar from "./user-avatar"
 import { usePathname } from "next/navigation"
@@ -35,6 +36,22 @@ function UserAccountNav({ user } : { user : { name : string, image : string }}) 
                 max-h-[calc(100vh_-_60px)] overflow-y-auto z-[50] relative
                 m-2 bg-background
                 ">
+                    <div
+                    className="
+                    flex
+                    flex-col
+                    py-4
+                    ">
+                        <Link href={"/write"}>
+                            <DropdownMenuItem>
+                                 <Icons.edit strokeWidth={1} />
+                                <span>{"Write"}</span>
+                            </DropdownMenuItem>
+                        </Link>
+                    </div>
+
+                    <DropdownMenuSeparator className="w-[24px] -my-2 mx-6"/>
+
                     {userAccountNavConfig.map(({sections} : { sections : UserAccountNavSection[] }, idx, list) => (
                         <Fragment
                         key={idx}>
@@ -42,7 +59,7 @@ function UserAccountNav({ user } : { user : { name : string, image : string }}) 
                             className="
                             flex
                             flex-col
-                            py-2
+                            py-4
                             ">
                                 {sections.map(({icon, title, link} : UserAccountNavSection) => {
                                     const Icon = icon ? Icons[icon] : null
@@ -61,9 +78,24 @@ function UserAccountNav({ user } : { user : { name : string, image : string }}) 
                                 })}
                             </div>
 
-                            { idx < list.length - 1 ? <DropdownMenuSeparator/> : ""}
+                            <DropdownMenuSeparator/>
                         </Fragment>
                     ))}
+
+                    <div
+                    className="
+                    flex
+                    flex-col
+                    py-4
+                    ">
+                        <DropdownMenuItem className="py-0">
+                                Sign out
+                        </DropdownMenuItem>
+
+                        <DropdownMenuLabel className="py-0">
+                                test@gmail.com
+                        </DropdownMenuLabel>
+                    </div>
                 </DropdownMenuContent>
             </DropdownMenuPortal>
         </DropdownMenu>

@@ -1,4 +1,5 @@
-import { BarChart, Bookmark, LucideIcon } from "lucide-react"
+import { Edit } from "lucide-react"
+import { BarChart, Bookmark, Edit3, LucideIcon, Pencil } from "lucide-react"
 import {
     Search,
     Moon,
@@ -36,5 +37,6 @@ export const Icons  : {
     down : ChevronDown,
     fileText : FileText,
     bookmark : Bookmark,
-    barChart : BarChart
+    barChart : BarChart,
+    edit : Edit
 }
