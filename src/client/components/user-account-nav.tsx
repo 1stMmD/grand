@@ -13,10 +13,12 @@ import UserAvatar from "./user-avatar"
 import { usePathname } from "next/navigation"
 import { UserAccountNavSection, userAccountNavConfig } from "../config/user-account-nav"
 import Link from "next/link"
+import { useMediaQuery } from "../hooks/useMediaQuery"
 
 function UserAccountNav({ user } : { user : { name : string, image : string }}) {
     const pathname = usePathname()
-
+    const {MD} = useMediaQuery()
+    
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -36,6 +38,7 @@ function UserAccountNav({ user } : { user : { name : string, image : string }}) 
                 max-h-[calc(100vh_-_60px)] overflow-y-auto z-[50] relative
                 m-2 bg-background
                 ">
+                    {!MD ? <>
                     <div
                     className="
                     flex
@@ -51,7 +54,7 @@ function UserAccountNav({ user } : { user : { name : string, image : string }}) 
                     </div>
 
                     <DropdownMenuSeparator className="w-[24px] -my-2 mx-6"/>
-
+                    </> : ""}
                     {userAccountNavConfig.map(({sections} : { sections : UserAccountNavSection[] }, idx, list) => (
                         <Fragment
                         key={idx}>
