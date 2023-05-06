@@ -50,7 +50,7 @@ const DropdownMenuItem = React.forwardRef<
     ref={ref}
     className={cn(
         `flex outline-none px-6 py-2 gap-4 transition-colors
-        hover:text-neutral text-neutral/80 font-[400]
+        hover:text-neutral text-neutral/70 font-[400]
         cursor-pointer text-[14px] items-center`,
         className
     )}
@@ -67,7 +67,7 @@ const DropdownMenuLabel = React.forwardRef<
     ref={ref}
     className={cn(
         `flex outline-none px-6 py-2 gap-4 transition-colors
-        text-neutral/80 font-[400]
+        text-neutral/70 font-[400]
         cursor-default text-[13px] items-center`,
         className
     )}
