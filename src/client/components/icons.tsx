@@ -1,4 +1,4 @@
-import { Edit } from "lucide-react"
+import { Bell, Edit } from "lucide-react"
 import { BarChart, Bookmark, Edit3, LucideIcon, Pencil } from "lucide-react"
 import {
     Search,
@@ -38,5 +38,6 @@ export const Icons  : {
     fileText : FileText,
     bookmark : Bookmark,
     barChart : BarChart,
-    edit : Edit
+    edit : Edit,
+    notification : Bell
 }
