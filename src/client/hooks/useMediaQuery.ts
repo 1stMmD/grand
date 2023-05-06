@@ -16,11 +16,11 @@ export const useMediaQuery = () => {
             setDXL(dxlQuery.matches)
         }
 
-        const smQuery = window.matchMedia("(min-width : 0px) and (max-width : 640px)")
-        const mdQuery = window.matchMedia("(min-width : 641px) and (max-width : 768px)")
-        const lgQuery = window.matchMedia("(min-width : 769px) and (max-width : 1024px)")
-        const xlQuery = window.matchMedia("(min-width : 1025px) and (max-width : 1280px)")
-        const dxlQuery = window.matchMedia("(min-width : 1281px)")
+        const smQuery = window.matchMedia("(min-width : 640px)")
+        const mdQuery = window.matchMedia("(min-width : 768px)")
+        const lgQuery = window.matchMedia("(min-width : 1024px)")
+        const xlQuery = window.matchMedia("(min-width : 1280px)")
+        const dxlQuery = window.matchMedia("(min-width : 1536px)")
 
         window.addEventListener("resize", onChange)
 

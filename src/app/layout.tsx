@@ -40,13 +40,15 @@ export default function RootLayout({
 }
 
 const RightSide = () => {
-  const {SM} = useMediaQuery()
+  const {SM , MD} = useMediaQuery()
 
   return (
     <div className='flex items-center justify-center gap-8'>
-      {SM ? <IconButton
+      {!SM ? <IconButton
       Icon={Icons.search}
       /> : ""}
+
+      {MD ? <></> : ""}
 
       <IconButton
       Icon={Icons.notification}
@@ -74,7 +76,7 @@ const LeftSide = () => {
     '>
       <Icons.logo className='h-6' />
 
-      {!SM ? "test" : ""}
+      {SM ? "test" : ""}
     </div>
   )
 }
