@@ -1,7 +1,7 @@
 "use client"
 
 import { Icons } from '@/client/components/icons'
-import './globals.css'
+import '@/client/styles/globals.css'
 import UserAccountNav from '@/client/components/user-account-nav'
 import IconButton from '@/client/components/ui/icon-button'
 import { useMediaQuery } from '@/client/hooks/useMediaQuery'

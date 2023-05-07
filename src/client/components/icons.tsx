@@ -1,4 +1,4 @@
-import { Bell, Edit } from "lucide-react"
+import { Bell, ChevronLeft, ChevronRight, Edit } from "lucide-react"
 import { BarChart, Bookmark, Edit3, LucideIcon, Pencil } from "lucide-react"
 import {
     Search,
@@ -34,6 +34,8 @@ export const Icons  : {
     moon : Moon,
     sun : Sun,
     user : User,
+    left : ChevronLeft,
+    right : ChevronRight,
     down : ChevronDown,
     fileText : FileText,
     bookmark : Bookmark,
