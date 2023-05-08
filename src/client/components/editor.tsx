@@ -1,8 +1,9 @@
 "use client"
 
 import React , {useCallback, useEffect , useRef, useState} from 'react'
-import EditorJS , { OutputBlockData }from '@editorjs/editorjs'
+import EditorJS from '@editorjs/editorjs'
 import TextareaAutoSize from 'react-textarea-autosize'
+import "@/client/styles/editor.css"
 
 interface props {
     editorRef : EditorJS
@@ -64,8 +65,9 @@ function Editor() {
     return (
         <div 
         className='
-        relative max-w-full w-fit
+        relative max-w-full w-full
         flex flex-col
+        text-neutral
         '>
             <TextareaAutoSize
             className="resize-none outline-none min-w-0 text-5xl font-bold"
@@ -78,7 +80,7 @@ function Editor() {
             <div
             id="editor"
             className='
-            max-w-full
+            w-full
             h-fit
             text-inherit
             '
