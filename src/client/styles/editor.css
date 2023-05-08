@@ -1,0 +1,33 @@
+.ce-toolbar__content,
+.ce-block__content
+{
+    max-width: none !important;
+}
+
+.ce-header
+{
+    font-weight: 600;
+}
+
+.codex-editor--narrow .ce-toolbar__actions{
+    right : 100% !important;
+}
+
+.codex-editor--narrow .ce-toolbox .ce-popover {
+    right : 0
+}
+
+.codex-editor--narrow .ce-toolbox {
+    right: unset;
+    left: auto;
+}
+
+.codex-editor--narrow .ce-toolbox .ce-popover {
+    left: 0;
+}
+
+@media (max-width:650px) {
+    .codex-editor--narrow .ce-toolbar__actions{
+        right : auto !important;
+    }
+}  
