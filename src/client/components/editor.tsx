@@ -4,8 +4,11 @@ import React , {useCallback, useEffect , useRef, useState} from 'react'
 import EditorJS , { OutputBlockData }from '@editorjs/editorjs'
 import TextareaAutoSize from 'react-textarea-autosize'
 
+interface props {
+    editorRef : EditorJS
+}
+
 function Editor() {
-    const [data, setData] = useState<OutputBlockData[]>()
     const ref = useRef<EditorJS>()
     const [isMounted, setIsMounted] = useState<boolean>(false)
     const [isSaving, setIsSaving] = useState<boolean>(false)
@@ -59,21 +62,11 @@ function Editor() {
     },[initializeEditor, isMounted])
 
     return (
-        <form 
-        onSubmit={() => {}}
+        <div 
         className='
-        flex flex-col w-fit
+        relative max-w-full w-fit
+        flex flex-col
         '>
-            <button
-            type="button"
-            onClick={async () => {
-                const body = await ref.current?.save()
-                setData(body?.blocks)
-            }}
-            className=''
-            >
-                Save
-            </button>
             <TextareaAutoSize
             className="resize-none outline-none min-w-0 text-5xl font-bold"
             id="title"
@@ -91,7 +84,7 @@ function Editor() {
             '
             />
             
-        </form>
+        </div>
     )
 }
 
